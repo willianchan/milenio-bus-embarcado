@@ -1,0 +1,19 @@
+{
+    "porta": [
+        {
+            "id": 1,
+            "entrada": 4,
+            "saida": 3
+        },
+        {
+            "id": 2,
+            "entrada": 1,
+            "saida": 2
+        },
+        {
+            "id": 3,
+            "entrada": 0,
+            "saida": 5
+        }
+    ]
+}
