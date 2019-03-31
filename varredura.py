@@ -1,8 +1,10 @@
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
 from pathlib import Path
+import json
+import requests
 
-url_API = "http://www.google.com/"
+url_API = "http://localhost:3000/milenio-bus-api/"
 contador = 0
 
 
@@ -14,18 +16,20 @@ def check_server_connection(url):
         print(err)
         return False
 
+
 while True:
     try:
         file_path = Path("json/registro-{}.json".format(contador))
-        if file_path.is_file() and True:#check_server_connection(url_API)
-                # faz request
 
+        if file_path.is_file() and check_server_connection(url_API):
 
+            with file_path.open() as json_file:
+                data = json.load(json_file)
 
+            r = requests.post(url_API + "registro/", json=data)
 
-                # deleta arquivo se tudo der certo
+            if r.status_code == 201:
                 file_path.unlink()
-                # aumenta contador
                 contador += 1
         else:
             contador = 0
