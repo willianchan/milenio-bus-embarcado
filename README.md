@@ -15,7 +15,7 @@ $ pip install pathlib
 
 ## Uso
 
-```python
+```bash
 $ python varredura.py
 ```
 
