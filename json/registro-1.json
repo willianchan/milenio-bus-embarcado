@@ -3,18 +3,18 @@
     "porta": [
         {
             "id": 1,
-            "entrada": 4,
-            "saida": 3
+            "entrada": 2,
+            "saida": 1
         },
         {
             "id": 2,
-            "entrada": 1,
+            "entrada": 5,
             "saida": 2
         },
         {
             "id": 3,
-            "entrada": 8,
-            "saida": 5
+            "entrada": 3,
+            "saida": 1
         }
     ]
 }

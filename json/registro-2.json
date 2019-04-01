@@ -1,0 +1,20 @@
+{
+    "id_transporte": 1,
+    "porta": [
+        {
+            "id": 1,
+            "entrada": 4,
+            "saida": 1
+        },
+        {
+            "id": 2,
+            "entrada": 2,
+            "saida": 4
+        },
+        {
+            "id": 3,
+            "entrada": 7,
+            "saida": 3
+        }
+    ]
+}
