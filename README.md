@@ -1,25 +1,27 @@
 # Sistema de varredura de arquivos JSON
 
-Realiza a varredura contante da pasta /json em busca de arquivos de registro, posteriormente realiza requisição para a API com os dados do arquivo.
+Realiza a varredura contante da pasta `/json` em busca de arquivos de registro, posteriormente realiza requisição para a API com os dados do arquivo.
 
 ## Instalação
 
 Use o gerenciador de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar pacotes
 
 ```bash
-pip install requests
-pip install pathlib
+$ git clone https://github.com/willianchan/milenio-bus-embarcado.git
+$ cd milenio-bus-embarcado
+$ pip install requests
+$ pip install pathlib
 ```
 
 ## Uso
 
 ```python
-python varredura.py
+$ python varredura.py
 ```
 
 ## Teste
 
-Para fins de teste, cole um arquivo nomeado registro*.json dentro da pasta /json com seguinte estrutura:
+Para fins de teste, cole um arquivo nomeado `registro*.json` dentro da pasta `/json` com seguinte estrutura:
 
 ```
 {
