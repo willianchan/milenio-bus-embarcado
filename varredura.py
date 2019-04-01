@@ -3,9 +3,9 @@ from urllib.error import HTTPError, URLError
 from pathlib import Path
 import json
 import requests
+import glob
 
 url_API = "http://localhost:3000/milenio-bus-api/"
-contador = 0
 
 
 def check_server_connection(url):
@@ -19,20 +19,18 @@ def check_server_connection(url):
 
 while True:
     try:
-        file_path = Path("json/registro-{}.json".format(contador))
+        for file in glob.glob("./json/registro*.json"):
+            file_path = Path(file)
 
-        if file_path.is_file() and check_server_connection(url_API):
+            if file_path.is_file() and check_server_connection(url_API):
 
-            with file_path.open() as json_file:
-                data = json.load(json_file)
+                with file_path.open() as json_file:
+                    data = json.load(json_file)
 
-            r = requests.post(url_API + "registro/", json=data)
+                r = requests.post(url_API + "registro/", json=data)
 
-            if r.status_code == 201:
-                file_path.unlink()
-                contador += 1
-        else:
-            contador = 0
+                if r.status_code == 201:
+                    file_path.unlink()
 
     except:
         print("Erro causou fechamento do programa")

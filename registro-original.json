@@ -1,4 +1,5 @@
 {
+    "id_transporte": 1,
     "porta": [
         {
             "id": 1,
@@ -12,7 +13,7 @@
         },
         {
             "id": 3,
-            "entrada": 0,
+            "entrada": 8,
             "saida": 5
         }
     ]
