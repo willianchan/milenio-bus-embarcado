@@ -1,5 +1,9 @@
 # Sistema de varredura de arquivos JSON
 
+Projeto desenvolvido para o processo seletivo para vaga de estágio na empresa Milênio Bus.
+
+## Descrição
+
 Realiza a varredura contante da pasta `/json` em busca de arquivos de registro, posteriormente realiza requisição para a API com os dados do arquivo.
 
 ## Instalação
